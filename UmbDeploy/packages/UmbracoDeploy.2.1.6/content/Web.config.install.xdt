@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections xdt:Transform="InsertIfMissing" />
+  <configSections>
+    <sectionGroup name="umbraco.deploy" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing">
+      <section name="environments" type="Umbraco.Deploy.Configuration.DeployEnvironmentsSection, Umbraco.Deploy" requirePermission="false" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(type,requirePermission)" />
+      <section name="settings" type="Umbraco.Deploy.Configuration.DeploySettingsSection, Umbraco.Deploy" requirePermission="false" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(type,requirePermission)" />
+    </sectionGroup>
+  </configSections>
+  <umbraco.deploy xdt:Transform="InsertIfMissing">
+    <environments configSource="config\UmbracoDeploy.config" xdt:Locator="Match(configSource)" xdt:Transform="InsertIfMissing" />
+    <settings configSource="config\UmbracoDeploy.Settings.config" xdt:Locator="Match(configSource)" xdt:Transform="InsertIfMissing" />
+  </umbraco.deploy>
+</configuration>

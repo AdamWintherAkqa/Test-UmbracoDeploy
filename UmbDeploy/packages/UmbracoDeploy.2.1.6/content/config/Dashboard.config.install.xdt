@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<dashBoard xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	<section alias="UmbracoDeploy" xdt:Locator="Match(alias)" xdt:Transform="Remove" />
+	<section alias="Deploy" xdt:Locator="Match(alias)" xdt:Transform="Remove" />  
+  <section alias="Deploy" xdt:Locator="Match(alias)" xdt:Transform="InsertAfter(/dashBoard/section)">
+	  <areas>
+		<area>content</area>
+	  </areas>
+	  <tab caption="Your workspace" xdt:Locator="Match(caption)">
+		<control>
+		  /App_Plugins/Deploy/views/dashboards/dashboard.html
+		</control>
+	  </tab>
+  </section>
+</dashBoard>
